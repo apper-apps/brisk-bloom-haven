@@ -21,7 +21,7 @@ const Home = () => {
     try {
       setLoading(true)
       setError(null)
-      const products = await productService.getAll()
+const products = await productService.getAll()
       setFeaturedProducts(products.slice(0, 8))
     } catch (err) {
       setError(err.message)

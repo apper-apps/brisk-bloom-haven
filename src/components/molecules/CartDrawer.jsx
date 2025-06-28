@@ -99,14 +99,14 @@ const CartDrawer = ({ isOpen, onClose }) => {
                             <span className="font-semibold text-primary">${item.price}</span>
                             <div className="flex items-center gap-2">
                               <button
-                                onClick={() => updateQuantity(item.Id, item.quantity - 1)}
+onClick={() => updateQuantity(item.Id, item.quantity - 1)}
                                 className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-gray-100 transition-colors"
                               >
                                 <ApperIcon name="Minus" className="w-4 h-4" />
                               </button>
                               <span className="w-8 text-center font-medium">{item.quantity}</span>
                               <button
-                                onClick={() => updateQuantity(item.Id, item.quantity + 1)}
+onClick={() => updateQuantity(item.Id, item.quantity + 1)}
                                 className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center hover:bg-gray-100 transition-colors"
                               >
                                 <ApperIcon name="Plus" className="w-4 h-4" />
@@ -116,7 +116,7 @@ const CartDrawer = ({ isOpen, onClose }) => {
                         </div>
                         
                         <button
-                          onClick={() => removeFromCart(item.Id)}
+onClick={() => removeFromCart(item.Id)}
                           className="w-8 h-8 rounded-full hover:bg-red-100 flex items-center justify-center transition-colors text-red-500"
                         >
                           <ApperIcon name="Trash2" className="w-4 h-4" />

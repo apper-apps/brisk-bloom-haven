@@ -1,17 +1,20 @@
-import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { motion, AnimatePresence } from 'framer-motion'
-import ApperIcon from '@/components/ApperIcon'
-import SearchBar from '@/components/molecules/SearchBar'
-import CartDrawer from '@/components/molecules/CartDrawer'
-import { useCart } from '@/hooks/useCart'
-
+import React, { useContext, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import { AuthContext } from "@/App";
+import ApperIcon from "@/components/ApperIcon";
+import CartDrawer from "@/components/molecules/CartDrawer";
+import SearchBar from "@/components/molecules/SearchBar";
+import { useCart } from "@/hooks/useCart";
 const Header = () => {
-  const location = useLocation()
+const location = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const { getCartCount } = useCart()
+  const { logout } = useContext(AuthContext)
+  const { user, isAuthenticated } = useSelector((state) => state.user)
 
   const navigation = [
     { name: 'Home', href: '/', icon: 'Home' },
@@ -91,8 +94,7 @@ const Header = () => {
                 placeholder="Search flowers..."
               />
             </div>
-
-            {/* Actions */}
+{/* Actions */}
             <div className="flex items-center gap-3">
               {/* Mobile Search Toggle */}
               <button
@@ -121,6 +123,24 @@ const Header = () => {
                 )}
               </motion.button>
 
+              {/* User Menu & Logout */}
+              {isAuthenticated && user && (
+                <div className="hidden md:flex items-center gap-3">
+                  <span className="text-sm text-gray-600">
+                    Welcome, {user.firstName || user.name || 'User'}!
+                  </span>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={logout}
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-gray-700 hover:text-primary hover:bg-primary/5 transition-colors"
+                  >
+                    <ApperIcon name="LogOut" className="w-4 h-4" />
+                    <span className="text-sm font-medium">Logout</span>
+                  </motion.button>
+                </div>
+              )}
+
               {/* Mobile Menu Toggle */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -129,6 +149,7 @@ const Header = () => {
                 <ApperIcon name={isMenuOpen ? "X" : "Menu"} className="w-5 h-5" />
               </button>
             </div>
+          </div>
           </div>
 
           {/* Mobile Search */}
@@ -146,11 +167,12 @@ const Header = () => {
                   placeholder="Search flowers..."
                 />
               </motion.div>
-            )}
+)}
           </AnimatePresence>
         </div>
+      </motion.header>
 
-        {/* Mobile Navigation */}
+      {/* Mobile Navigation */}
         <AnimatePresence>
           {isMenuOpen && (
             <motion.div
@@ -177,16 +199,34 @@ const Header = () => {
                       }`}
                     >
                       <ApperIcon name={item.icon} className="w-5 h-5" />
-                      {item.name}
+{item.name}
                     </Link>
                   </motion.div>
                 ))}
+                
+                {/* Mobile Logout */}
+                {isAuthenticated && user && (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: navigation.length * 0.1 }}
+                  >
+                    <button
+                      onClick={() => {
+                        setIsMenuOpen(false)
+                        logout()
+                      }}
+                      className="flex items-center gap-3 px-4 py-3 rounded-xl font-medium text-gray-700 hover:text-primary hover:bg-primary/5 transition-all w-full"
+                    >
+                      <ApperIcon name="LogOut" className="w-5 h-5" />
+                      Logout
+                    </button>
+                  </motion.div>
+                )}
               </nav>
             </motion.div>
-          )}
+)}
         </AnimatePresence>
-      </motion.header>
-
       {/* Cart Drawer */}
       <CartDrawer isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
 

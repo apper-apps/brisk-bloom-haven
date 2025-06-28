@@ -20,7 +20,7 @@ const Collections = () => {
     try {
       setLoading(true)
       setError(null)
-      const data = await productService.getAll()
+const data = await productService.getAll()
       setProducts(data)
     } catch (err) {
       setError(err.message)

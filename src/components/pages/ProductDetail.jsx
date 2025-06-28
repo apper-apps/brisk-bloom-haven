@@ -31,7 +31,7 @@ const ProductDetail = () => {
     try {
       setLoading(true)
       setError(null)
-      const data = await productService.getById(parseInt(id))
+const data = await productService.getById(parseInt(id))
       setProduct(data)
       if (data.colors && data.colors.length > 0) {
         setSelectedColor(data.colors[0])

@@ -21,7 +21,7 @@ const ProductCard = ({ product }) => {
   }
 
   const handleCardClick = () => {
-    navigate(`/product/${product.Id}`)
+navigate(`/product/${product.Id}`)
   }
 
   return (
