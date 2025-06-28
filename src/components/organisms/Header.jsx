@@ -147,9 +147,8 @@ const location = useLocation()
                 className="lg:hidden w-10 h-10 rounded-lg hover:bg-gray-100 flex items-center justify-center transition-colors"
               >
                 <ApperIcon name={isMenuOpen ? "X" : "Menu"} className="w-5 h-5" />
-              </button>
+</button>
             </div>
-          </div>
           </div>
 
           {/* Mobile Search */}
