@@ -6,11 +6,31 @@ import { AuthContext } from '@/App';
 function Login() {
   const { isInitialized } = useContext(AuthContext);
   
-  useEffect(() => {
+useEffect(() => {
     if (isInitialized) {
-      // Show login UI in this component
-      const { ApperUI } = window.ApperSDK;
-      ApperUI.showLogin("#authentication");
+      // Ensure the target element exists before showing login UI
+      const targetElement = document.getElementById('authentication');
+      if (targetElement) {
+        try {
+          const { ApperUI } = window.ApperSDK;
+          ApperUI.showLogin("#authentication");
+        } catch (error) {
+          console.error("Failed to initialize login UI:", error);
+        }
+      } else {
+        // Retry after a short delay if element not found
+        setTimeout(() => {
+          const retryElement = document.getElementById('authentication');
+          if (retryElement) {
+            try {
+              const { ApperUI } = window.ApperSDK;
+              ApperUI.showLogin("#authentication");
+            } catch (error) {
+              console.error("Failed to initialize login UI on retry:", error);
+            }
+          }
+        }, 100);
+      }
     }
   }, [isInitialized]);
   
