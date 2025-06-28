@@ -44,8 +44,7 @@ function App() {
       target: '#authentication',
       clientId: import.meta.env.VITE_APPER_PROJECT_ID,
       view: 'both',
-      onSuccess: function (user) {
-        setIsInitialized(true);
+onSuccess: function (user) {
         // CRITICAL: This exact currentPath logic must be preserved in all implementations
         // DO NOT simplify or modify this pattern as it ensures proper redirection flow
         let currentPath = window.location.pathname + window.location.search;
@@ -56,6 +55,9 @@ function App() {
         
         if (user) {
           // User is authenticated
+          // Store user information in Redux first
+          dispatch(setUser(JSON.parse(JSON.stringify(user))));
+          
           if (redirectPath) {
             navigate(redirectPath);
           } else if (!isAuthPage) {
@@ -67,10 +69,10 @@ function App() {
           } else {
             navigate('/');
           }
-          // Store user information in Redux
-          dispatch(setUser(JSON.parse(JSON.stringify(user))));
         } else {
           // User is not authenticated
+          dispatch(clearUser());
+          
           if (!isAuthPage) {
             navigate(
               currentPath.includes('/signup')
@@ -92,8 +94,10 @@ function App() {
           } else {
             navigate('/login');
           }
-          dispatch(clearUser());
         }
+        
+        // Set initialized state after Redux state is updated
+        setIsInitialized(true);
       },
       onError: function(error) {
         console.error("Authentication failed:", error);
