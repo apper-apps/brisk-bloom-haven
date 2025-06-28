@@ -1,0 +1,84 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom toast styling */
+.Toastify__toast {
+  border-radius: 12px;
+  min-height: 60px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 8px 32px rgba(233, 30, 99, 0.15);
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(135deg, #F44336, #e53935);
+  color: white;
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+  color: white;
+}
+
+.Toastify__progress-bar {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #E91E63, #C2185B);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #C2185B, #AD1457);
+}
+
+/* Floating petals animation */
+.petal {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: radial-gradient(ellipse at center, #E91E63 0%, transparent 70%);
+  border-radius: 50% 0 50% 0;
+  transform: rotate(45deg);
+  animation: petal-fall linear infinite;
+}
+
+.petal:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+.petal:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 2s; }
+.petal:nth-child(3) { left: 30%; animation-duration: 9s; animation-delay: 4s; }
+.petal:nth-child(4) { left: 40%; animation-duration: 11s; animation-delay: 1s; }
+.petal:nth-child(5) { left: 50%; animation-duration: 8s; animation-delay: 3s; }
+.petal:nth-child(6) { left: 60%; animation-duration: 10s; animation-delay: 5s; }
+.petal:nth-child(7) { left: 70%; animation-duration: 9s; animation-delay: 1.5s; }
+.petal:nth-child(8) { left: 80%; animation-duration: 11s; animation-delay: 3.5s; }
+.petal:nth-child(9) { left: 90%; animation-duration: 8s; animation-delay: 2.5s; }
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.2s ease-out;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

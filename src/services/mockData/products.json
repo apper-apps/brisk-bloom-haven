@@ -1,0 +1,198 @@
+{
+  "mockProducts": [
+    {
+      "Id": 1,
+      "name": "Classic Red Rose Bouquet",
+      "price": 45.99,
+      "originalPrice": 55.99,
+      "images": [
+        "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&h=500",
+        "https://images.unsplash.com/photo-1563242203-eebe50f27a96?w=500&h=500",
+        "https://images.unsplash.com/photo-1582794543465-40ada9b97c30?w=500&h=500"
+      ],
+      "category": "Roses",
+      "description": "A timeless arrangement of 12 premium red roses, expertly arranged with baby's breath and elegant greenery. Perfect for expressing your deepest love and affection.",
+      "inStock": true,
+      "colors": ["Red", "Pink", "White"],
+      "occasions": ["Anniversary", "Valentine's Day", "Just Because"],
+      "rating": 4.8,
+      "reviewCount": 156
+    },
+    {
+      "Id": 2,
+      "name": "Spring Tulip Garden",
+      "price": 32.99,
+      "images": [
+        "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&h=500",
+        "https://images.unsplash.com/photo-1582794543701-cc72eb18d3e6?w=500&h=500"
+      ],
+      "category": "Tulips",
+      "description": "Fresh spring tulips in vibrant colors, arranged in a charming rustic vase. Brings the beauty of a Dutch garden to your home.",
+      "inStock": true,
+      "colors": ["Mixed", "Pink", "Yellow", "Purple"],
+      "occasions": ["Birthday", "Get Well", "Just Because"],
+      "rating": 4.6,
+      "reviewCount": 89
+    },
+    {
+      "Id": 3,
+      "name": "Elegant White Lily Arrangement",
+      "price": 58.99,
+      "images": [
+        "https://images.unsplash.com/photo-1574684891174-df6b02ab38d7?w=500&h=500",
+        "https://images.unsplash.com/photo-1580916420638-afbac3ca9fce?w=500&h=500"
+      ],
+      "category": "Lilies",
+      "description": "Sophisticated white lilies complemented by delicate eucalyptus and white roses. Perfect for sympathy, weddings, or any elegant occasion.",
+      "inStock": true,
+      "colors": ["White", "Cream"],
+      "occasions": ["Wedding", "Sympathy", "Anniversary"],
+      "rating": 4.9,
+      "reviewCount": 134
+    },
+    {
+      "Id": 4,
+      "name": "Sunshine Sunflower Bunch",
+      "price": 28.99,
+      "images": [
+        "https://images.unsplash.com/photo-1597848212624-e6fa4d5b7b8d?w=500&h=500",
+        "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=500&h=500"
+      ],
+      "category": "Sunflowers",
+      "description": "Bright and cheerful sunflowers that bring instant joy to any room. Arranged with seasonal greenery in a natural kraft wrap.",
+      "inStock": true,
+      "colors": ["Yellow", "Orange"],
+      "occasions": ["Birthday", "Get Well", "Graduation"],
+      "rating": 4.7,
+      "reviewCount": 92
+    },
+    {
+      "Id": 5,
+      "name": "Premium Mixed Bouquet",
+      "price": 75.99,
+      "images": [
+        "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=500",
+        "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=500&h=500"
+      ],
+      "category": "Mixed Bouquets",
+      "description": "Our florist's choice premium selection featuring roses, lilies, chrysanthemums, and seasonal blooms in a stunning arrangement.",
+      "inStock": true,
+      "colors": ["Mixed", "Pink", "Purple", "White"],
+      "occasions": ["Birthday", "Anniversary", "Graduation", "Just Because"],
+      "rating": 4.9,
+      "reviewCount": 201
+    },
+    {
+      "Id": 6,
+      "name": "Exotic Orchid Display",
+      "price": 89.99,
+      "images": [
+        "https://images.unsplash.com/photo-1563543575-3a5d89ad7090?w=500&h=500",
+        "https://images.unsplash.com/photo-1612190812138-f2b6ac4e8d6a?w=500&h=500"
+      ],
+      "category": "Orchids",
+      "description": "Stunning phalaenopsis orchids in an elegant ceramic pot. Long-lasting beauty that continues to bloom for weeks.",
+      "inStock": true,
+      "colors": ["White", "Pink", "Purple"],
+      "occasions": ["Wedding", "Anniversary", "Corporate"],
+      "rating": 4.8,
+      "reviewCount": 67
+    },
+    {
+      "Id": 7,
+      "name": "Sweet Pink Carnations",
+      "price": 24.99,
+      "images": [
+        "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&h=500",
+        "https://images.unsplash.com/photo-1591886960571-74d43a9d4166?w=500&h=500"
+      ],
+      "category": "Carnations",
+      "description": "Delicate pink carnations arranged with white baby's breath. A sweet and affordable way to show you care.",
+      "inStock": true,
+      "colors": ["Pink", "Red", "White", "Purple"],
+      "occasions": ["Birthday", "Get Well", "Just Because"],
+      "rating": 4.5,
+      "reviewCount": 45
+    },
+    {
+      "Id": 8,
+      "name": "Luxury Peony Collection",
+      "price": 95.99,
+      "images": [
+        "https://images.unsplash.com/photo-1563297007-0686b83bf31a?w=500&h=500",
+        "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=500&h=500"
+      ],
+      "category": "Peonies",
+      "description": "Premium peonies in full bloom, arranged in a crystal vase. The epitome of luxury and elegance for special occasions.",
+      "inStock": false,
+      "colors": ["Pink", "White", "Coral"],
+      "occasions": ["Wedding", "Anniversary", "Graduation"],
+      "rating": 5.0,
+      "reviewCount": 23
+    },
+    {
+      "Id": 9,
+      "name": "Garden Fresh Mixed Blooms",
+      "price": 42.99,
+      "images": [
+        "https://images.unsplash.com/photo-1582794707077-7b3d9b2e4c5b?w=500&h=500",
+        "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=500&h=500"
+      ],
+      "category": "Mixed Bouquets",
+      "description": "A charming collection of garden-fresh flowers including daisies, roses, and seasonal blooms in a rustic mason jar.",
+      "inStock": true,
+      "colors": ["Mixed", "Pastel"],
+      "occasions": ["Birthday", "Get Well", "Just Because"],
+      "rating": 4.6,
+      "reviewCount": 78
+    },
+    {
+      "Id": 10,
+      "name": "Royal Purple Rose Bouquet",
+      "price": 52.99,
+      "images": [
+        "https://images.unsplash.com/photo-1582794688067-bc7d0ecdc61a?w=500&h=500",
+        "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?w=500&h=500"
+      ],
+      "category": "Roses",
+      "description": "Magnificent deep purple roses arranged with silver dusty miller and eucalyptus. A regal choice for someone truly special.",
+      "inStock": true,
+      "colors": ["Purple", "Lavender"],
+      "occasions": ["Anniversary", "Wedding", "Just Because"],
+      "rating": 4.7,
+      "reviewCount": 112
+    },
+    {
+      "Id": 11,
+      "name": "Cheerful Yellow Daisies",
+      "price": 26.99,
+      "images": [
+        "https://images.unsplash.com/photo-1584735175315-9d5df23860d4?w=500&h=500",
+        "https://images.unsplash.com/photo-1582794543701-cc72eb18d3e6?w=500&h=500"
+      ],
+      "category": "Daisies",
+      "description": "Bright yellow gerbera daisies that radiate happiness and warmth. Perfect for lifting spirits and brightening any day.",
+      "inStock": true,
+      "colors": ["Yellow", "Orange", "White"],
+      "occasions": ["Birthday", "Get Well", "Graduation"],
+      "rating": 4.4,
+      "reviewCount": 56
+    },
+    {
+      "Id": 12,
+      "name": "Romantic Pink Rose Garden",
+      "price": 48.99,
+      "images": [
+        "https://images.unsplash.com/photo-1563242203-eebe50f27a96?w=500&h=500",
+        "https://images.unsplash.com/photo-1582794707077-7b3d9b2e4c5b?w=500&h=500"
+      ],
+      "category": "Roses",
+      "description": "Soft pink roses combined with white spray roses and delicate greenery. A romantic gesture that speaks from the heart.",
+      "inStock": true,
+      "colors": ["Pink", "White", "Blush"],
+      "occasions": ["Anniversary", "Valentine's Day", "Wedding"],
+      "rating": 4.8,
+      "reviewCount": 143
+    }
+  ]
+}
